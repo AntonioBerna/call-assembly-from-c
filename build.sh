@@ -14,6 +14,6 @@ elif [ "$1" = "clean" ]; then
     rm build/*
     echo "Cleaned"
 else
-    echo "Usage: $0 [intel|AT&T]"
+    echo "Usage: $0 [intel|ATT]"
     exit 1
 fi
