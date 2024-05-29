@@ -4,6 +4,8 @@
 
 CFLAGS="-Wall -Wextra -Werror"
 
+mkdir -p ./build/
+
 if [ "$1" = "intel" ]; then
     gcc $CFLAGS src/calculator.c src/intel.s -o build/intel-calculator -z noexecstack -I./include/
     echo "Build intel-calculator"
