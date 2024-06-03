@@ -2,13 +2,10 @@
 
 ## Introduction
 
-This is a simple project that combine the power of `Assembly` language with the power of `C` language. In this project I have create a basic calculator with the four fundamental operations, namely sum, subtract, multiplication and division. Obviously this is not a large-scale production project, but it represents a tool for educational purposes. In fact, in this project two versions of `Assembly` language were implemented and used: `AT&T` and `Intel`.
+This is a simple project that combine the power of `Assembly` language with the power of `C` language. In this project I have create a basic calculator with the four fundamental operations, namely sum, subtract, multiplication and division. Obviously this is not a large-scale production project, but it represents a tool for educational purposes. In fact, in this project three versions of `Assembly` language were implemented and used: `AT&T`, `Intel` and `ARM`.
 
 > [!WARNING]
-> The `Assembly` used in this repository is not compatible with `ARM` processors, so you won't be able to use it on ARM-based computers like the `Raspberry Pi`. If you are interested in the development of the `Assembly` language on `ARM` platforms you can open a dedicated `issue` in the appropriate section.
-
-> [!WARNING]
-> This code has only been tested on `Manjaro Linux`. If you experience problems using other operating systems, such as `Windows` or `macOS`, make sure you have the appropriate skills or risk damaging your equipment.
+> This code has only been tested on `Manjaro Linux` (for `AT&T Assembly` and `Intel Assembly) and `Raspberry Pi 3 Model B` (for `ARM Assembly` based on `aarch64` run on `Raspbian` operating system). If you experience problems using other operating systems, such as `Windows` or `macOS`, make sure you have the appropriate skills or risk damaging your equipment.
 
 ## Mini docs
 
@@ -24,6 +21,8 @@ once we are inside the project folder we can use one of the following programs:
 ./build.sh ATT
 # or
 ./build.sh intel
+# or
+./build.sh arm
 # or
 ./build.sh clean
 ```
@@ -42,12 +41,22 @@ istr source, destination
 
 As we can see, by not having to specify the number of bytes/bits, by not having to specify the `%` symbol and by not having to specify the `$` symbol for immediate values, this syntax is simpler and more pleasant.
 
+Finally the syntax of `ARM Assembly` is very different from the previous ones and appears, in the simplest case, as follows:
+
+```assembly
+istr destination, operand1, operand2
+```
+
+in fact we note the presence of 3 parameters. However, in this type of `Assembly` we can also use 2 parameters, based on the type of instruction we want to execute.
+
 Once the command has been chosen, the executable file will be created inside the `build` directory. Therefore we can run our code using the following command:
 
 ```shell
 ./build/ATT-calculator
 # or
 ./build/intel-calculator
+# or
+./build/arm-calculator
 ```
 
 getting the following message:
@@ -56,6 +65,8 @@ getting the following message:
 Usage: ./build/ATT-calculator [add|sub|mul|div|test] [x] [y]
 # or
 Usage: ./build/intel-calculator [add|sub|mul|div|test] [x] [y]
+# or
+Usage: ./build/arm-calculator [add|sub|mul|div|test] [x] [y]
 ```
 
 Then simply follow the instructions in the message obtained to use the program correctly.
