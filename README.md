@@ -5,7 +5,7 @@
 This is a simple project that combine the power of `Assembly` language with the power of `C` language. In this project I have create a basic calculator with the four fundamental operations, namely sum, subtract, multiplication and division. Obviously this is not a large-scale production project, but it represents a tool for educational purposes. In fact, in this project three versions of `Assembly` language were implemented and used: `AT&T`, `Intel` and `ARM`.
 
 > [!WARNING]
-> This code has only been tested on `Manjaro Linux` (for `AT&T Assembly` and `Intel Assembly) and `Raspberry Pi 3 Model B` (for `ARM Assembly` based on `aarch64` run on `Raspbian` operating system). If you experience problems using other operating systems, such as `Windows` or `macOS`, make sure you have the appropriate skills or risk damaging your equipment.
+> This code has only been tested on `Manjaro Linux` (for `AT&T Assembly` and `Intel Assembly`) and `Raspberry Pi 3 Model B` (for `ARM Assembly` based on `aarch64` run on `Raspbian` operating system). If you experience problems using other operating systems, such as `Windows` or `macOS`, make sure you have the appropriate skills or risk damaging your equipment.
 
 ## Mini docs
 
@@ -47,7 +47,7 @@ Finally the syntax of `ARM Assembly` is very different from the previous ones an
 istr destination, operand1, operand2
 ```
 
-in fact we note the presence of 3 parameters. However, in this type of `Assembly` we can also use 2 parameters, based on the type of instruction we want to execute.
+in fact we note the presence of 3 parameters. However, in this type of `Assembly` we can also use 2 parameters, based on the type of instruction we want to use.
 
 Once the command has been chosen, the executable file will be created inside the `build` directory. Therefore we can run our code using the following command:
 
