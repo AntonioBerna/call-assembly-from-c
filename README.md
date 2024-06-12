@@ -12,7 +12,7 @@ This is a simple project that combine the power of `Assembly` language with the 
 Download the repository to your computer using the following command:
 
 ```shell
-git clone https://github.com/AntonioBerna/call-x86-from-c.git
+git clone https://github.com/AntonioBerna/call-assembly-from-c.git
 ```
 
 once we are inside the project folder we can use one of the following programs:
